@@ -25,9 +25,12 @@ jobs:
         with:
           hugo-version: '0.135.0'
           extended: true
-      - run: hugo --minify
+      - name: Build Hugo site
+        run: hugo --minify
       # chặn Jekyll lọc thư mục bắt đầu bằng '_' (an toàn cho Hugo)
       - run: touch public/.nojekyll
+      - name: Check public directory
+        run: ls -la public/ | head -20
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
