@@ -1,0 +1,41 @@
+/* Author cards */
+.author-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 0px solid rgba(2, 1, 1, 0.07);
+  border-radius: 0px;
+  background-color: #fff;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.author-card img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 0px;
+  flex-shrink: 0;
+}
+
+.author-card__body h3 {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+}
+
+.author-card__body p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .author-card {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .author-card img {
+    width: 110%;
+    height: auto;
+  }
+}
